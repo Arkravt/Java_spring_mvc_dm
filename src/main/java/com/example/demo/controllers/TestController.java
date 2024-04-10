@@ -1,17 +1,21 @@
 package com.example.demo.controllers;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
+@RequestMapping(value = "/intro")
 public class TestController {
 
-    @ResponseBody
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    /*
+    Если мы используем аннотацию @ResponseBody, то возвращаемое значение будет строка, если этой аннотации не будет,
+    тогда в качестве возвращаемого значения будет подставляться файл templates/intro.html.
+     */
+
+    //@ResponseBody
+    @GetMapping(value = "/getinfo/")
     public String getInfo() {
-        return "Artem";
+        return "intro";
     }
 
 }
