@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -15,6 +15,21 @@
             value="Add new member"
             onclick="location.href='members/new_member'">
 </form>
+
+<div>
+    <p>Created members: </p>
+    <table>
+        <tr>
+            <th>First name</th>
+            <th>Last name</th>
+        </tr>
+        <tr th:each="member : ${members}">
+            <td th:text="${member.firstName}"></td>
+            <td th:text="${member.lastName}"></td>
+        </tr>
+    </table>
+</div>
+
 </body>
 
 </html>
