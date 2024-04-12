@@ -1,6 +1,6 @@
-package com.example.demo.controllers.members;
+package com.example.demo.Members.controllers;
 
-import com.example.demo.controllers.models.Member;
+import com.example.demo.Members.models.Member;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

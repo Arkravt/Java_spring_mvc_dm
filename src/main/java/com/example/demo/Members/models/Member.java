@@ -1,4 +1,4 @@
-package com.example.demo.controllers.models;
+package com.example.demo.Members.models;
 
 public class Member {
 
